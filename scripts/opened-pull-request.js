@@ -26,7 +26,7 @@ module.exports = (robot) => {
       .then(tuple => {
         const [size, response] = tuple;
         if (size > 0) {
-          robot.messageRoom('dev-notifications', "\nje vous rappelle qu'il y a actuellement `" + size + "` pull requests ouvertes sur les projets OpenWinesDatabase. Voici la liste :\n\n" + response + "\n");
+          robot.messageRoom('github-notifs', "\nje vous rappelle qu'il y a actuellement `" + size + "` pull requests ouvertes sur les projets OpenWinesDatabase. Voici la liste :\n\n" + response + "\n");
         }
         setTimeout(notifyForOpenPRs, TIMEOUT);
       });
