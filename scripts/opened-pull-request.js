@@ -10,8 +10,6 @@
 // Commands:
 //   hubot show me open prs - Display the list of open prs
 //
-// Author:
-//   Opun Team
 
 const fetch = require('isomorphic-fetch');
 const moment = require('moment');
@@ -28,7 +26,7 @@ module.exports = (robot) => {
       .then(tuple => {
         const [size, response] = tuple;
         if (size > 0) {
-          robot.messageRoom('opun-dev', "\nje vous rappelle qu'il y a actuellement `" + size + "` pull requests ouvertes sur les projets OpenWinesDatabase. Voici la liste :\n\n" + response + "\n");
+          robot.messageRoom('dev-notifications', "\nje vous rappelle qu'il y a actuellement `" + size + "` pull requests ouvertes sur les projets OpenWinesDatabase. Voici la liste :\n\n" + response + "\n");
         }
         setTimeout(notifyForOpenPRs, TIMEOUT);
       });

@@ -5,8 +5,6 @@
 //   "url": ""
 //   "querystring": ""
 //
-// Author:
-//   Opun Team
 
 const urllib = require('url');
 const querystring = require('querystring');
